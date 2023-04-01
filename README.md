@@ -1,5 +1,5 @@
 # NFT preview card component solution
-This repository contains my solution for the [*NFT preview card component* challenge] (https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U/hub) from frontendmentor.io. [View solution via netlify] (https://timely-clafoutis-77c05c.netlify.app/)!
+This repository contains my solution for the [*NFT preview card component* challenge](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U/hub) from frontendmentor.io. [View solution via netlify](https://timely-clafoutis-77c05c.netlify.app/)!
 
 For this particular challenge, I only downloaded the starter files without the Figma nor Sketch design files. To solve the problem, I should be able to mimick the designs showed below.
 
