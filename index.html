@@ -2,181 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="NFT preview card component main solution">
   
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | NFT preview card component</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-
-
-  <style>
-    a { text-decoration: none; }
-    body { 
-      background-color: hsl(217, 54%, 11%); 
-      font-family: 'Outfit', sans-serif;;
-    }
-
-    img {
-      margin: 5px;;
-    }
-
-    span { color: hsl(0, 0%, 100%); }
-
-    .attribution { font-size: 11px; text-align: center; color: hsl(215, 51%, 70%); }
-    .attribution a { color: hsl(228, 45%, 44%); }
-
-    .card { 
-      margin: 30px auto 30px auto; 
-      border-radius: 10px;
-    }
-
-    .card-footer { 
-      border-color: hsl(215, 32%, 27%); 
-      padding: 10px 0;
-    }
-    .card, .card-footer { background-color: hsl(216, 50%, 16%); }
-
-    .card-title { 
-      color: hsl(0, 0%, 100%); 
-      font-weight: 600;
-      margin: 10px;
-    }
-
-    .card-title:hover, .creator-name:hover {
-      color: hsl(178, 100%, 50%); 
-    }
-
-    .card-body, .card-footer { color: hsl(215, 51%, 70%); }
-
-    .card-img-top {
-      position: block;
-      margin: 20px;
-      width: 88%;
-      border-radius: 10px;
-      display: block;
-      height: auto;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 20.5px;
-      bottom: 269.5px;
-      left: 22px;
-      right: 22px;
-      border-radius: 10px;
-      opacity: 0;
-      transition: .5s ease;
-      background-color: hsl(178, 100%, 50%);
-    }
-
-    .eye {
-      color: white;
-      font-size: 100px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-
-    .card:hover .overlay{
-      opacity: .7;
-    }
-
-    .creator-name {
-      color: hsl(0, 0%, 100%); 
-    }
-
-    .creator-footer {
-      padding: 5px;
-    }
-
-    .img-avatar {
-      padding-left: 0;
-    }
-
-    .text-in-card {
-      margin: 10px;
-    }
-
-    #img-avatar {
-      width: 12%;
-      border: 1px solid hsl(0, 0%, 100%);
-      border-radius: 50%;
-    }
-
-    #price {
-      color: hsl(178, 100%, 50%);
-      font-weight: 400;
-    }
-
-    .currency-info {
-      padding: 10px 5px;
-    }
-
-    .time {
-      padding-left: 120px;
-    }
-
-    .time-img, .currency-img {
-      padding-bottom: 2px;
-    }
-
-  </style>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <div class=>
-    <div class="card" style="width: 375px">
-      <!-- <div class="rounded-2"> -->
-        <img src="images/image-equilibrium.jpg" class="card-img-top mx-auto" alt="equilibrium-img">
-
-        <div class="overlay middle">
-          <div>
-            <i class="bi bi-eye-fill eye"></i>
-          </div>
+  <main>
+    <h1 class="sr-only">NFT Preview Card Component</h1>
+    <article class="card">
+      <img id="nft-img" src="images/image-equilibrium.jpg" alt="equilibrium photo">
+      <div class="overlay">
+        <img src="images/icon-view.svg" alt="view-icon">
+      </div>
+      <h2><span class="active-text">Equilibrium #3429</span></h2>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div class="nft-info">
+        <div class="nft-price">
+          <img src="images/icon-ethereum.svg" alt="ethereum-icon">
+          <p>0.041 ETH</p>
         </div>
-
-
-      <!-- </div> -->
-      <div class="card-body">
-        <a class="card-title fs-5 text" href="#">Equilibrium #3429</a>
-        <p class="text-in-card">
-          Our Equilibrium collection promotes balance and calm.
-        </p>
-
-        <!-- container for currency and time -->
-        <div class="currency-info">
-          <div class="currency d-inline">
-            <img class="currency-img d-inline" src="images/icon-ethereum.svg" alt="ethereum-img">
-            <p id="price" class="d-inline">0.041 ETH</p>
-            </div>
-    
-            <div class="time d-inline">
-            <img class="time-img d-inline" src="images/icon-clock.svg" alt="clock-icon">
-            <p class="d-inline">3 days left</p>
-            </div>
-        </div>
-        <!-- end of container for currency and time -->      
-          
-        <div class="card-footer mx-auto" style="max-width: 320px;">
-          <img id="img-avatar" class="d-inline" src="images/image-avatar.png" alt="avatar">
-          <p class="creator-footer d-inline">Creation of <a class="creator-name" href="#">Jules Wyvern</a></p>
+        <div class="nft-timer">
+          <img src="images/icon-clock.svg" alt="clock-icon">
+          <p>3 days left</p>
         </div>
       </div>
-    </div>
-  </div>
+      <hr>
+      <div class="card-footer">
+        <img id="avatar" src="images/image-avatar.png" alt="jules-wyvern-photo">
+        <p>Creation of <span class="active-text">Jules Wyvern</span></p>
+      </div>
+    </article>
 
-  <div class="attribution">
+  </main>
+
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.itsmedenisse.com" target="_blank">Denisse Joyce Alido</a>.
-  </div>
+    Coded by <a href="#">Denisse Joyce</a>.
+  </footer>
+ 
 </body>
 </html>
