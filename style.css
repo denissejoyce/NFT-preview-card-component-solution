@@ -11,9 +11,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;   
-    transition: all ease; 
+    transition: 0.3s all ease; 
 }
-
 
 
 body {
@@ -132,7 +131,6 @@ main {
 
     justify-content: center;
     align-items: center;
-    /* visibility: hidden; */
 }
 
 .overlay > img {
@@ -144,7 +142,6 @@ main {
 .overlay-container:hover .overlay {
     cursor: pointer;   
     opacity: 0.8;
-    transition: 0.3s all ease;
 }
 
 .sr-only {
@@ -172,13 +169,39 @@ main {
 }
 
 @media (max-width: 430px) {
+    body {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 22px;
+    }
     .card {
         max-width: 350px;
+    }
+    .overlay {
+        max-width: 304px;
+        max-height: 304px;
+    }
+    #avatar {
+        width: 8%;
     }
 }
 
 @media (max-width: 400px) {
+    body {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 22px;
+    }
     .card {
         max-width: 320px;
+    }
+    .overlay {
+        max-width: 274px;
+        max-height: 274px;
+    }
+    #avatar {
+        width: 8%;
     }
 }
